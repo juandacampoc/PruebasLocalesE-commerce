@@ -1,0 +1,129 @@
+@--colorPrimario: hsl(0, 100%, 75%);
+@--colorGreen: hsl(154, 59%, 51%);
+@--colorBlue: hsl(248, 32%, 51%);
+@--colorDark-Blue: hsl(249, 10%, 26%);
+@--colorGrayish-Blue: hsl(246, 25%, 77%);
+@--colorWhite: #fff;
+@--colorRed: #f31111;
+@--fontFamilyPrimaria:'Poppins', sans-serif;
+
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .pagedataform-controllerdataform-index{
+        font-family: 'Poppins', sans-serif;
+        background-color: @--colorPrimario;
+        color: @--colorWhite;
+    }
+    .main-container{
+        width: 330px;
+        margin: 96px auto 40px;
+        h1{
+            width: 235px;
+            font-size: 1.7em;
+            line-height: 38px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .descripcion{
+            text-align: center;
+            margin: 0 10px 69px;
+        }
+        .offert{
+            background-color: @--colorBlue;
+            max-width: 330px;
+            max-height: 90px;
+            padding: 22px 75px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 6px #4e31df;
+            span{
+                font-weight: 700;
+            }
+        }
+        .form-container{
+            background-color: white;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 6px 0 #4e31df;
+            input{
+                height: 55px;
+                margin-bottom: 18px;
+                border-radius: 4px;
+                border: 1px solid @--colorGrayish-Blue;
+                outline: none;
+                font-family: @--fontFamilyPrimaria;
+            }
+            input[type="submit"]{
+                background-color: @--colorGreen;
+                color: @--colorWhite;
+                text-transform: uppercase;
+                font-size: 1em;
+                border: none;
+            }
+
+            .error-container{
+                position: relative;
+                .icon-error{
+                    position: absolute;
+                    right: 10px;
+                    top: -45px;
+                }
+                .error{
+                    color: @--colorRed;
+                    font-style: italic;
+                    text-align: right;
+                    font-size: 11px;
+                    margin: -12px 0 18px;
+                }
+            }
+            .terms{
+                color: @--colorGrayish-Blue;
+                font-size: 0.7em;
+                margin: 0 14px;
+                text-align: center;
+            }
+        }
+
+    }
+
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .pagedataform-controllerdataform-index{
+        .main-container{
+            display: flex;
+            width: 1114px;
+            align-items: center;
+            justify-content: space-evenly;
+            h1{
+                font-size: 3.7em;
+                width: 414px;
+                line-height: 55px;
+                margin-bottom: 30px;
+            }
+            .descripcion{
+                font-size: 18px;
+                width: 390px;
+            }
+        }
+    }
+}

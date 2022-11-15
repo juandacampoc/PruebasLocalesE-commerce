@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<container name="container-formularios" htmlTag="div" htmlClass="containerFormularios" before="-">
+                <block name="controllerdataform.index" class="Jcampo\Dataform\Block\Controllerdataform\Index" template="Jcampo_Dataform::controllerdataform/formularioIndex.phtml"/>
+                <block name="dataform.index" class="Jcampo\Dataform\Block\Controllerdataform\Index" template="Jcampo_Dataform::controllerdataform/dataformulario.phtml"/>
+            </container>
+		</referenceContainer>
+	</body>
+</page>
